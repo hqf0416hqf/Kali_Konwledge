@@ -15,13 +15,13 @@
 ## 基本脚本格式（举例）
 
 ```bash
-#!/bin/bash   
-# 说明选择的脚本
-echo "你好，$1,欢迎来到$2"  
+    #!/bin/bash   
+    # 说明选择的脚本
+    echo "你好，$1,欢迎来到$2"  
 
-name=$1
-channel=$2
-echo "你好，$name,欢迎来到$channel"
+    name=$1
+    channel=$2
+    echo "你好，$name,欢迎来到$channel"
 ```
 
 ## 常用脚本变量
@@ -57,8 +57,33 @@ echo "你好，$name,欢迎来到$channel"
 - `export`
 - 
 - 
-- 
+- `-lt  -gt  -eq`
+- `continue`  和 `break`
+- `&&` `||` .....
+- 分支
+    ```bash
+        if [[]];then
+        #代码块（执行内容）
+        elif [[]];then
+        #代码块
+        else
+        #代码块
+        fi
+    ```
+- 循环
+    ```bash
+        ##while循环
+        while [[]]
+        do
+        #代码块（执行内容）
+        done
+    ```
+
 ## 常用语法2
-- `shuf`
-    - 用法举例
-    - `shuf -i 1-10 -n 1`
+- 随机数
+    - `shuf`
+        - 用法举例
+        - `shuf -i 1-10 -n 1`
+    - `$RANDOM` 这个变量每次会生成一个 0-32767 的随机数
+        - 用法举例
+        - `echo $RANDOM`

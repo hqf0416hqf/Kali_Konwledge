@@ -1,2 +1,0 @@
-# Kali_Konwledge
-kali_personal_knowledge_base

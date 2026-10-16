@@ -36,7 +36,7 @@
     g++ -L
     ```
 
-- **add_library()**
+- **add_library()**o
   - 例如：
     ```cmake
     add_library(tools STATIC a.cpp b.cpp c.cpp)

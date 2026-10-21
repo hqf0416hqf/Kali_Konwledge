@@ -27,6 +27,7 @@ git diff	默认工作区/暂存区
 .gitnore
 
 
+
 五
 Git
 │
@@ -97,6 +98,8 @@ gitcommit
 - .gitnore 
 - git checkout
 - git branch -f <移动分支名> <目标哈希>
+- git tag 
+
 
 ## 远程
 ## 问题
@@ -116,3 +119,5 @@ gitcommit
 、、草稿、、、、、、、、、、、、、、、、、、、、、、、、、、、
 git branch -av
 git log --oneline --decorate --graph --all -n 20
+
+

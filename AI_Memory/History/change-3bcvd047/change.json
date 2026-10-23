@@ -1,0 +1,11 @@
+{
+  "path": "AI_Memory/当前教学断点.md",
+  "old_sha256": "195d94c52f8da86f9d389cf0aa74cb100714bcc4e05fb2e4b7b7c907a821080e",
+  "new_sha256": "a03da6f0f187a22cbe080446b333ff1b2d578b2a587610eaf52782fa544f74c2",
+  "source": "2026-10-22 本会话用户对 RAW/WIKI、日常维护的确认及 USB 原提问",
+  "reason": "记录已确认的维护规则与真实教学断点；不升级掌握等级",
+  "evidence_date": "2026-10-22",
+  "recorded_at": "2026-10-22T09:02:13.606994+00:00",
+  "applied": true,
+  "archive": "AI_Memory/History/change-3bcvd047"
+}

@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0283215290b5966a",
+        "id": "031c7fb7c91c4e4b",
         "type": "tabs",
         "children": [
           {
-            "id": "141b1ecf0b7ce2bd",
+            "id": "50e0aa4f7adc9ba4",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -79,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 250.5
   },
   "right": {
     "id": "e17786287531132d",
@@ -181,8 +181,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "21cd7db7db66076d",
+  "active": "50e0aa4f7adc9ba4",
   "lastOpenFiles": [
+    "WIKI/Math/Probability‑And‑Statistics/Probability.md",
+    "RAW/2026-10-08.md",
     "WIKI/Reflections",
     "m",
     "AGENTS.md",
@@ -197,7 +199,6 @@
     "WIKI/Entertainment/Fish",
     "WIKI/Entertainment/Drawing",
     "WIKI/Entertainment",
-    "WIKI/English",
     "WIKI/CS/tools/2Dcode/QR/reference/image/QR_5.png",
     "WIKI/CS/tools/2Dcode/QR/reference/image/QR_4.png",
     "WIKI/CS/tools/2Dcode/QR/reference/image/QR_3.png",
@@ -218,7 +219,6 @@
     "WIKI/CS/Issue/中文乱码.md",
     "WIKI/Math/Probability‑And‑Statistics/reference/link.md",
     "WIKI/Math/Probability‑And‑Statistics/Statistics.md",
-    "WIKI/Math/Probability‑And‑Statistics/Probability.md",
     "WIKI/Hardware/Embedded/Embedded.md",
     "Math/Probability‑And‑Statistics/Statistics.md",
     "CS/Programming_Language/c_cpp/Cpp.md",

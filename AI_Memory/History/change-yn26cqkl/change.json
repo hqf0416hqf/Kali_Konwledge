@@ -1,0 +1,11 @@
+{
+  "path": "AI_Memory/当前教学断点.md",
+  "old_sha256": "4d5b5027a63831982d64dc61be75eaf8f870e1907a88e534d8f803afebbdc95c",
+  "new_sha256": "195d94c52f8da86f9d389cf0aa74cb100714bcc4e05fb2e4b7b7c907a821080e",
+  "source": "当前用户阶段1、2指令；指定网页原交流及本地工具验证",
+  "reason": "阶段交付、来源补核与教学断点纠正",
+  "evidence_date": "2026-10-22",
+  "recorded_at": "2026-10-21T17:13:07.470983+00:00",
+  "applied": true,
+  "archive": "AI_Memory/History/change-yn26cqkl"
+}

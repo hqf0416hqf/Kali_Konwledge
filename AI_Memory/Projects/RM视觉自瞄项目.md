@@ -1,5 +1,5 @@
 ---
-updated: 2026-11-21
+updated: 2026-11-23
 type: project-learning-state
 project: RM 视觉自瞄
 status: 基础学习并行，开始以现用代码库和仿真推进（验收待核）
@@ -41,3 +41,18 @@ status: 基础学习并行，开始以现用代码库和仿真推进（验收待
 - **项目边界**：目前取得的是用户选定项目和教学约定；本轮未读取/运行该团队源码，未验证 Gazebo/Talos 接口兼容性、图像接入、自瞄闭环或精度。相关路线是已有教师建议，不能写成已实现。
 - **最新入口**：先固定源码版本并定位图像输入及检测输出，选择录制图像或最小仿真图像作为输入，验收一个接口。保存输入、版本、实际输出与失败症状，再扩展姿态/控制/仿真时钟；不直接要求一次跑通整套系统。
 - 本次只更新个人学习仓库，不向团队仓库写入；现用项目不等同 AutoQR。原独立故障复现和视觉数学课程继续保留。
+
+## RM-02：预算、实际状态与源码入口核验（2026-11-23）
+
+来源：[WEB-21 至 WEB-23](../../RAW/2026-11-23.md)。用户目标明确为逐步独立调试、适应装甲板/相机/算力/成本变化，承担 3v3／步兵视觉。每天 3–4 小时、每周至少 6 天为 RM 专属时间，项目相关 C++/数学/系统学习计入其中。四级与 AprilTag 小车占用按 [执行方案](../学习方案.md) 调整。
+
+用户本机环境曾由模型配置，用户表示“应该能编译”。当前记为“配置经历有自述，实际编译/运行待核”；不得改写成已经编译成功、用户会独立配置或本轮验证通过。
+
+本轮只读核验团队仓库 main 对应 `ce230a07f2ab7709beaab60671bfa21069495ae7`：
+- [构建架构](https://github.com/HNUST-Dust/Dust_infantry_vision/blob/ce230a07f2ab7709beaab60671bfa21069495ae7/docs/architecture.md) 与 CMakePresets.json 已提供 tools-tests、offline-tests、robot 预设。tools-tests 适合检查较小的通用组件构建，不能证明视觉管线通过。
+- [检测视频入口](https://github.com/HNUST-Dust/Dust_infantry_vision/blob/ce230a07f2ab7709beaab60671bfa21069495ae7/tests/detection/detector_video_test.cpp) 读取视频并调用检测，现有实现同时构造 Detector 与 YOLO，不能仅因选择传统分支就承诺无需网络推理依赖。
+- [集成回放入口](https://github.com/HNUST-Dust/Dust_infantry_vision/blob/ce230a07f2ab7709beaab60671bfa21069495ae7/tests/integration/auto_aim_test.cpp) 读取 avi 及配套 txt 时间/姿态数据；用户单独提供任意视频不自动满足全部输入要求。
+- tests/CMakeLists.txt 中两个回放可执行文件受 build_inference 与 build_pipeline 控制；根 CMake 和 tasks/auto_aim/CMakeLists.txt 显示 offline-tests 预设不会自动启用这些推理回放目标，网络推理分支仍要求 OpenVINO。具体选项应按用户本机版本检查。
+- 上述为源码/文档检查，本轮未编译、运行、接入硬件或核实本机与远程版本一致；不改变用户能力评级。
+
+**工程第一步**：取得用户本地源码版本、已有构建目标/命令/退出状态以及最近实际运行输出。若已经能跑，直接复用成果进入接口阅读；若失败，只定位第一个明确阻塞。随后选择一个固定输入的接口，记录预测、输出与一次可解释的小改动。
